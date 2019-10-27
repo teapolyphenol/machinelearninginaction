@@ -53,6 +53,7 @@ def plotBestFit(weights):
     plt.show()
 
 def stocGradAscent0(dataMatrix, classLabels):
+    dataMatrix = np.array(dataMatrix)
     m,n = shape(dataMatrix)
     alpha = 0.01
     weights = ones(n)   #initialize to all ones
