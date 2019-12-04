@@ -85,6 +85,7 @@ def classifyVector(inX, weights):
 def colicTest():
     frTrain = open('horseColicTraining.txt'); frTest = open('horseColicTest.txt')
     trainingSet = []; trainingLabels = []
+    # 对给定数进行预测
     for line in frTrain.readlines():
         currLine = line.strip().split('\t')
         lineArr =[]
@@ -94,6 +95,7 @@ def colicTest():
         trainingLabels.append(float(currLine[21]))
     trainWeights = stocGradAscent1(array(trainingSet), trainingLabels, 1000)
     errorCount = 0; numTestVec = 0.0
+    # 判断预测数据是否正确
     for line in frTest.readlines():
         numTestVec += 1.0
         currLine = line.strip().split('\t')
