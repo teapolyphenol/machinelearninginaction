@@ -93,7 +93,7 @@ def regularize(xMat):#regularize by columns
 def stageWise(xArr,yArr,eps=0.01,numIt=100):
     xMat = mat(xArr); yMat=mat(yArr).T
     yMean = mean(yMat,0)
-    yMat = yMat - yMean     #can also regularize ys but will get smaller coef
+    yMat = yMat - yMean     #can also regularize ys but will sget smaller coef
     xMat = regularize(xMat)
     m,n=shape(xMat)
     #returnMat = zeros((numIt,n)) #testing code remove
