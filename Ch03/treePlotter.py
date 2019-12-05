@@ -50,7 +50,7 @@ def plotNode(nodeTxt, centerPt, parentPt, nodeType):
 
 def plotMidText(cntrPt, parentPt, txtString):
     xMid = (parentPt[0]-cntrPt[0])/2.0 + cntrPt[0]
-    yMid = (parentPt[1]-cntrPt[1])/2.0 + cntrPt[1]
+    yMid = (parentPt[1]-cntrPt[1])/2.0 + cntrPt[1]decisionNode
     createPlot.ax1.text(xMid, yMid, txtString, va="center", ha="center", rotation=30)
 
 def plotTree(myTree, parentPt, nodeTxt):#if the first key tells you what feat was split on
